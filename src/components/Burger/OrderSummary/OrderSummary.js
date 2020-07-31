@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Aux from '../../../hoc/Auxiliary'
+import Aux from '../../../hoc/Auxiliary/Auxiliary'
 import Continue from '../../UI/Buttons/Button';
 
 class OrderSummary extends Component{
@@ -21,7 +21,7 @@ class OrderSummary extends Component{
                     {ingredientSummary}
                 </ul>
                 <p><strong>Total Price: </strong>{this.props.price.toFixed(2)}$</p>
-                <Continue Cancel={this.props.Cancel}/>
+                <Continue Continue={this.props.Confirm} Cancel={this.props.Cancel}/>
             </Aux>
         );
     } 
