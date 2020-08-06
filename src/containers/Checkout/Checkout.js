@@ -10,7 +10,7 @@ class Checkout extends Component{
             meat: 0, 
             salad: 0
         },
-        totalPrice: 0
+        totalPrice: 4
     }
 
     componentDidMount(){
