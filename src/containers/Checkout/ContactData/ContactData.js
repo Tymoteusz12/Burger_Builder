@@ -4,6 +4,7 @@ import axios from '../../../axios-orders';
 import ContactClass from './ContactData.css'
 import Spinner from '../../../components/UI/Spinner/Spinner';
 import Input from '../../../components/UI/Input/Input';
+import { connect } from 'react-redux';
 class ContactData extends Component{
     state = {
         formIsValid: false,
@@ -83,7 +84,7 @@ class ContactData extends Component{
                         {value: 'cheapest', displayValue: 'Cheapest'}
                     ]
             },
-            validation:{},
+            validation: {},
             value: 'fastest',
             valid: true
             },
@@ -144,7 +145,7 @@ class ContactData extends Component{
         updatedFormElement.touched = true;
         updatedOrderForm[inputID] = updatedFormElement;
 
-        let formIsValid = false;
+        let formIsValid = true;
         for(let key in updatedOrderForm){
             formIsValid = updatedOrderForm[key].valid && formIsValid;
         }
@@ -187,4 +188,11 @@ class ContactData extends Component{
     }
 }
 
-export default ContactData;
+const mapStateToProps = state => {
+    return {
+        ingredients: state.ingredients,
+        price: state.totalPrice
+    }
+}
+
+export default connect(mapStateToProps)(ContactData);
