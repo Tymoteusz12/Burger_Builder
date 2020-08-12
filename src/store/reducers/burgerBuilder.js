@@ -57,7 +57,7 @@ const reducer = ( state = initialState, action) => {
         case actionTypes.SET_INGREDIENTS: return setIngredients(state, action);
         case actionTypes.FETCH_INGREDIENTS_FAILED: return fetchingFailed(state, action);
         default: return state;
-        }  
+    }  
 };
 
 export default reducer;

@@ -1,0 +1,33 @@
+.Auth{
+    margin:80px auto;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0px 3px 5px 2px gray;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+button {
+    outline: none;
+    margin: 10px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+    color: white;
+    padding: 10px 0px;
+    border: 2px solid black;
+}
+.cancel{
+    background-color: brown;
+}
+
+.continue{
+    padding: 10px 20px;
+    background-color: green;
+}
+
+@media (min-width: 600px){
+    .Auth{
+        width: 500px;
+    }
+}
