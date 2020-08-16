@@ -1,7 +1,5 @@
 import * as actionTypes from '../actions/actionTypes';
-import order from '../../components/Order/Order';
-import { updateObject } from '../utility';
-import { purchaseBurgerSuccess, purchaseBurgerFailed } from '../actions/order';
+import { updateObject } from '../../shared/utility';
 
 const initialState = {
     orders: [],
